@@ -36,8 +36,6 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.bundles.kotlin)
-    implementation(libs.bundles.forge.raw)
     libs.bundles.forge.cc.get().map { implementation(fg.deobf(it)) }
 
     libs.bundles.externalMods.forge.runtime.get().map { runtimeOnly(fg.deobf(it)) }
@@ -64,7 +62,6 @@ publishingShaking {
                 fg.component(this)
                 mavenDependencies {
                     exclude(dependencies.create("site.siredvin:"))
-                    exclude(libs.jei.forge.get())
                 }
             }
         }

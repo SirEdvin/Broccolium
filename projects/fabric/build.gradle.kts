@@ -46,13 +46,16 @@ repositories {
             includeGroup("com.terraformersmc")
         }
     }
+    maven {
+        url = uri("https://jitpack.io")
+        content {
+            includeGroupByRegex("com.github.*")
+        }
+    }
 }
 
 
 dependencies {
-    implementation(libs.bundles.kotlin)
-
-    modImplementation(libs.bundles.fabric.core)
     modImplementation(libs.bundles.fabric.cc) {
         exclude("net.fabricmc.fabric-api")
         exclude("net.fabricmc", "fabric-loader")

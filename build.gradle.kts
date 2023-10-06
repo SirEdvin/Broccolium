@@ -8,7 +8,7 @@ plugins {
 }
 
 subprojectShaking {
-    withKotlin.set(true)
+    withKotlin.set(false)
 }
 
 val setupSubproject = subprojectShaking::setupSubproject
@@ -18,8 +18,8 @@ subprojects {
 }
 
 githubShaking {
-    modBranch.set("1.20")
-    projectRepo.set("Template")
+    modBranch.set("1.19.2")
+    projectRepo.set("Broccolium")
 //    mastodonProjectName.set("Template")
     shake()
 }

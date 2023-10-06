@@ -29,11 +29,11 @@ pluginManagement {
 }
 
 val minecraftVersion: String by settings
-rootProject.name = "TemplateProject $minecraftVersion"
+rootProject.name = "Brocollium $minecraftVersion"
 
-include(":core")
-include(":forge")
-include(":fabric")
+include(":peripherals")
+//include(":forge")
+//include(":fabric")
 
 
 for (project in rootProject.children) {
